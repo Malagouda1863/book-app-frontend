@@ -1,0 +1,38 @@
+/* Search Results CSS */
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.search-result-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+/* Make the BookCard take full width within its container */
+.search-result-wrapper > div {
+  width: 100%;
+}
+
+/* Make all book images the same height */
+.search-result-wrapper img {
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Ensure consistent spacing of book info */
+@media (min-width: 768px) {
+  .search-result-wrapper > div > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-result-wrapper > div > div > div:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+} 
